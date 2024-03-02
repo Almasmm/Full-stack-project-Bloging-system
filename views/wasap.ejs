@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest Photos from Unsplash</title>
+    <style>
+      img {
+        width: 99%;
+        max-height: 500px;
+        border-radius: 50px;
+      }
+      p {
+        font-weight: 700;
+      }
+      .photo-list a {
+        border: gray solid 1px;
+        border-radius: 20px;
+        padding: 10px 16px;
+        font-size: medium;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: #1c1c1c;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br />
+    <center>
+      <h2>Latest Photos for your blog!</h2>
+      <hr />
+    </center>
+    <br /><br /><br />
+    <div class="photo-list">
+      <% images.forEach(photo => { %>
+
+      <div class="photo-item">
+        <center>
+          <p>Photo by <%= photo.user.name %> on Unsplash</p>
+          <hr />
+          <img
+            src="<%= photo.urls.regular %>"
+            alt="<%= photo.alt_description %>"
+          />
+          <!-- Add a download button for each image -->
+          <br />
+          <br />
+          <a href="<%= photo.urls.regular %>" download>Download</a>
+          <br />
+          <br />
+          <hr />
+        </center>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

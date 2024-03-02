@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="text/javascript" defer src="/js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <%- include('../part/header_admin.ejs') %>
+      <main class="main"><%- body %></main>
+      <%- include('../part/foot.ejs') %>
+    </div>
+  </body>
+</html>

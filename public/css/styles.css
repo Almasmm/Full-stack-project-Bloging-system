@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #1c1c1c;
+  font-size: 1rem;
+  background-color: #faf5ee;
+  margin: 0;
+}
+
+a {
+  color: #1c1c1c;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #1c1c1c;
+  border: none;
+  color: whitesmoke;
+  padding: 16px 30px;
+  text-decoration: none;
+  margin: 3px 1px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 10px 16px;
+  background-color: rgba(255, 71, 71, 0.839);
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+.main {
+  padding: 20px 0px;
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 12px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  padding: 0px;
+}
+
+.nav ul a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav ul a:hover {
+  text-decoration: underline;
+}
+
+.nav ul a.active {
+  color: gray;
+}
+
+.auth {
+  padding: 12px 0px;
+  text-align: center;
+}
+
+.auth-heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.auth-p {
+  font-size: 1rem;
+  margin: 10px 0px 40px 0px;
+}
+
+.publics_heading {
+  text-align: center;
+  margin-top: 5rem;
+  font-weight: 500;
+}
+
+.publics_ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+  font-size: clamp(1.13rem, calc(1, 08rem + 0.23vw), 1.25rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.publics-date {
+  font-size: 0.7rem;
+  color: gray;
+  width: 200px;
+  display: inline-block;
+}
+
+.publics_ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  margin: 0px 0px;
+}
+
+@media only screen and (min-width: 760px) {
+  .publics_ul li a {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .publics-date {
+    text-align: right;
+  }
+}
+
+.publics_ul li {
+  font-size: 18px;
+  cursor: pointer;
+  transition: filter 0.1s;
+}
+
+.publics_ul li:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+.publics_ul li:hover {
+  filter: blur(1px);
+}
+
+.pagin {
+  font-size: 1.5rem;
+  color: gray;
+  text-decoration: none;
+  margin-top: 50px;
+  display: inline-block;
+}
+
+.pagin:hover {
+  color: #1c1c1c;
+}
+
+.publics {
+  white-space: pre-wrap;
+}
+
+.for-foot {
+  margin: 5rem;
+  text-align: center;
+}
+
+.admin-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-posts {
+  padding: 0;
+  margin: 0;
+}
+
+.admin-post-controls form {
+  display: inline-block;
+}
+
+.admin-post-controls .btn {
+  display: inline-block;
+  background-color: var(--black);
+  color: var(--gray-light);
+  border: 0;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  line-height: 2;
+}
+
+.admin-posts li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.header-btn {
+  margin-top: 20px;
+  margin-bottom: -40px;
+  border-radius: 15px;
+  padding: 10px 16px;
+  font-size: medium;
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration-line: none;
+  color: white;
+  background-color: #1c1c1c;
+  max-width: 23%;
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.admin-t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-posts {
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.admin-post-control form {
+  display: inline-block;
+}
+
+.admin-post-control .btn {
+  display: inline-block;
+  background-color: #1c1c1c;
+  color: white;
+  border: 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  line-height: 2;
+  border-radius: 20px;
+}
+
+.admin-posts li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.btn-d {
+  padding: 10px 16px;
+  background-color: red;
+}
+
+hr {
+  border: #1c1c1c solid 0.5px;
+}

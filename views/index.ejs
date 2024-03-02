@@ -1,0 +1,44 @@
+<br />
+<br />
+<br />
+<hr />
+<br />
+<br />
+<br />
+<div class="auth">
+  <h1 class="auth-heading">Welcome to the bloging system</h1>
+  <p class="auth-p">Full-stack project | Web-technologies Back-End course</p>
+</div>
+
+<section class="publics">
+  <h2 class="publics_heading">Latest posts:</h2>
+  <ul class="publics_ul">
+    <% data.forEach(post => { %>
+
+    <li>
+      <a href="/post/<%= post._id %>">
+        <span><%= post.name %></span>
+        <span class="publics-date"><%= post.createdAt.toDateString() %></span>
+      </a>
+    </li>
+
+    <% }) %>
+    <br />
+    <hr />
+  </ul>
+
+  <% if (np !== null) { %>
+  <a href="/?page=<%= np %>" class="pagin"> &lt; View all posts!</a>
+
+  <% } %>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const alertParam = params.get("alert");
+    if (alertParam === "signin") {
+      alert("You should sign in or sign up to view posts!");
+    }
+  });
+</script>

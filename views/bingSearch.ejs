@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search articles with Bing Search!</title>
+    <style>
+      .search {
+        margin-top: 50px;
+        font-size: 26px;
+      }
+
+      .search button {
+        border: gray solid 1px;
+        border-radius: 20px;
+        padding: 10px 16px;
+        font-size: medium;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: #1c1c1c;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .search button:hover {
+        background-color: gray;
+      }
+      input {
+        margin-top: 20px;
+        border-radius: 20px;
+        max-width: 50%;
+      }
+
+      .forlabel {
+        font-weight: 600;
+      }
+
+      p {
+        font-size: larger;
+        font-style: italic;
+      }
+
+      a {
+        font-weight: 900;
+      }
+      h2 {
+        margin-top: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 26px;
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search">
+      <center>
+        <hr />
+        <br />
+        <form action="/bingSearch" method="GET">
+          <label class="forlabel" for="query">Microsoft Bing Search</label>
+          <input
+            placeholder="Enter your query"
+            type="text"
+            id="query"
+            name="query"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+        <hr />
+      </center>
+    </div>
+
+    <h2>Search Results for "<%= query %>"</h2>
+
+    <% newsResults.forEach(article => { %>
+    <div>
+      <br />
+
+      <center><h3>Article name:</h3></center>
+      <h2><%= article.name %></h2>
+      <br />
+      <br />
+      <center><h3>Article description:</h3></center>
+      <p><%= article.description %></p>
+      <center>
+        <a href="<%= article.url %>">Read More &nearr;</a>
+      </center>
+      <br />
+      <hr />
+      <br />
+      <br />
+    </div>
+    <% }) %>
+  </body>
+</html>
